@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>p_11_js_selector</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <style>
+        #apagada{
+            position: absolute;
+            top: 0;
+            height: auto;
+            width: 30%;
+        
+        }
+        #encendida{
+            width: 30%;
+            height: auto;
+            position: absolute;
+            top: 0;
+        }
+     </style>
+     
+      <script>
+          $(document).ready(function(){
+              //$(".btn2").hide();
+              //$("#btn1").hide();
+              //$("p").hide();
+  
+              /*$(".btn2").click(function(){
+                  $(this).hide();
+                  });*/
+              
+             
+              $("#encendida").hide();
+              $("#apagada").show();
+  
+              $(".btn2").click(function(){
+                  $("#apagada").hide();
+                  $("#encendida").show();
+              });
+              $(".btn1").click(function(){
+                  $("#apagada").show();
+                  $("#encendida").hide();
+              });
+        
+          });
+          
+       </script>
+</head>
+<body>
+    <button class="btn1" type="button">apagada</button>
+    <button class="btn2" type="button">encendida</button>
+    <img id="apagada"src="img/bombilla1.png" alt="b1">
+    <img id="encendida"src="img/bombilla2.png" alt="b2">
+    
+</body>
+</html>
